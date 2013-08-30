@@ -1,0 +1,4 @@
+TTY (\?|[a-z\/\d]+)
+HOUR_MIN \d{,2}:\d{,2}
+STAT [DRSTWXZ<NLsl+]+
+PSAUXWWW %{USER:user}%{SPACE}%{INT:pid:int}%{SPACE}%{NUMBER:cpu:float}%{SPACE}%{NUMBER:mem:float}%{SPACE}%{INT:vsz:int}%{SPACE}%{INT:rss:int}%{SPACE}%{TTY:tty}%{SPACE}%{STAT:stat}%{SPACE}%{HOUR_MIN:start}%{SPACE}%{HOUR_MIN:time}%{SPACE}%{GREEDYDATA:process}
